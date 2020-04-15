@@ -6,7 +6,7 @@ variable "aws_security_group_id" {default = "sg-d1375eb1"}
 variable "instance_type" {default = "t2.micro"}
 
 provider "aws" {
-  region     = "us-east-2a"
+  region     = "us-east-2"
   access_key = "${var.aws_access_key}"
   secret_key = "${var.aws_secret_key}"
 }
@@ -15,5 +15,5 @@ resource "aws_instance" "cda_instance" {
   ami                    = "${var.aws_ami}"
   instance_type          = "${var.instance_type}"
   vpc_security_group_ids = ["${var.aws_security_group_id}"]
-  key_name	             = "cihat-key-us-east-2a"
+  key_name	             = "cihat-key-us-east-2"
 }
