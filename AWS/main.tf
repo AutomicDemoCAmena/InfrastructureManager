@@ -16,7 +16,7 @@ resource "aws_instance" "web" {
   ami                    = "${var.aws_ami}"
   instance_type          = "${var.instance_type}"
   vpc_security_group_ids = ["${var.aws_security_group_id}"]
-  key_name               = "${aws_key_pair.generated_key.key_name}"
+  key_name               = "${var.key_name}"
   tags = {
       Name = "AutomicIMdemo01"
   }
