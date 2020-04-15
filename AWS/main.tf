@@ -11,9 +11,11 @@ provider "aws" {
   secret_key = "${var.aws_secret_key}"
 }
 
-resource "aws_instance" "cda_instance" {
+resource "aws_instance" "web" {
   ami                    = "${var.aws_ami}"
   instance_type          = "${var.instance_type}"
   vpc_security_group_ids = ["${var.aws_security_group_id}"]
-  key_name	             = "cihat-key-us-east-2"
-}
+  tags = {
+      Name = "AutomicIMdemo01"
+  }
+  }
