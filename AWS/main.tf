@@ -5,6 +5,7 @@ variable "aws_ami" {default = "ami-0003569dd0860582f"}
 variable "aws_security_group_id" {default = "sg-0f81e34b1850851a0"}
 variable "instance_type" {default = "t2.micro"}
 variable "key_name" {default = "automic_demo_key_pem"}
+variable "tag_name" {default = "AutomicIMdemo01"}
 
 provider "aws" {
   region     = "us-east-2"
@@ -18,6 +19,6 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = ["${var.aws_security_group_id}"]
   key_name               = "${var.key_name}"
   tags = {
-      Name = "AutomicIMdemo01"
+      Name = "${var.tag_name}"
   }
   }
