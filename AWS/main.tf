@@ -5,7 +5,7 @@ variable "aws_ami" {default = "ami-0003569dd0860582f"}
 variable "aws_security_group_id" {default = "sg-0f81e34b1850851a0"}
 variable "instance_type" {default = "t2.micro"}
 variable "key_name" {default = "automic_demo_key_pem"}
-variable "tag_name" {default = "AutomicIMdemo01"}
+variable "tag_name" {default = "AutomicIMdemo"}
 
 provider "aws" {
   region     = "us-east-2"
