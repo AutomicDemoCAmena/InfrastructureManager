@@ -22,3 +22,11 @@ resource "aws_instance" "web" {
       Name = "${var.tag_name}"
   }
   }
+
+output "lb_address" {
+  value = "${aws_instance.web.*.public_dns}"
+}
+
+output "instance_ips" {
+  value = ["${aws_instance.web.*.public_ip}"]
+}
