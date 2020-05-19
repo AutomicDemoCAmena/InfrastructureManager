@@ -23,10 +23,15 @@ resource "aws_instance" "web" {
   }
   }
 
-output "lb_address" {
+output "public_dns" {
   value = "${aws_instance.web.*.public_dns}"
 }
-
-output "instance_ips" {
+output "public_ips" {
   value = ["${aws_instance.web.*.public_ip}"]
+}
+output "private_dns" {
+  value = ["${aws_instance.web.*.private_dns}"]
+}
+output "private_ips" {
+  value = ["${aws_instance.web.*.private_ip}"]
 }
