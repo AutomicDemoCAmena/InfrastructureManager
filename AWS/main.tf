@@ -6,7 +6,6 @@ variable "aws_security_group_id" {default = "sg-0d8f4a7454d8b6200"}
 variable "instance_type" {default = "t2.micro"}
 variable "key_name" {default = "CentOS.pem"}
 variable "tag_name" {default = "AutomicIMdemo"}
-variable "vpc_id" {default = "vpc-6b947c02"}
 
 
 provider "aws" {
@@ -23,7 +22,6 @@ resource "aws_instance" "web" {
   tags = {
       Name = "${var.tag_name}"
   }
-  vpc_id                 ="${var.vpc_id}"
   }
 
 output "public_dns" {
