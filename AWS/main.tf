@@ -8,7 +8,7 @@ variable "key_name" {default = "CentOS.pem"}
 variable "tag_name" {default = "AutomicIMdemo"}
 
 provider "aws" {
-  region     = "us-east-2"
+  region     = "me-south-1"
   access_key = "${var.aws_access_key}"
   secret_key = "${var.aws_secret_key}"
 }
