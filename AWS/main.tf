@@ -2,9 +2,9 @@ variable "aws_access_key" {}
 variable "aws_secret_key" {}
 //variable "aws_ami" {default = "ami-0080e4c5bc078760e"}
 variable "aws_ami" {default = "ami-0003569dd0860582f"}
-variable "aws_security_group_id" {default = "sg-0f81e34b1850851a0"}
+variable "aws_security_group_id" {default = "sg-0d8f4a7454d8b6200"}
 variable "instance_type" {default = "t2.micro"}
-variable "key_name" {default = "automic_demo_key_pem"}
+variable "key_name" {default = "CentOS.pem"}
 variable "tag_name" {default = "AutomicIMdemo"}
 
 provider "aws" {
